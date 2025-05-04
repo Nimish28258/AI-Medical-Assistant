@@ -1,4 +1,13 @@
-from fastapi import FastAPI
-import uvicorn
+from pydantic import BaseModel, EmailStr
+from datetime import datetime
 
-app = FastAPI()
+class User(BaseModel):
+    id: int
+    username: str
+    email: EmailStr
+    password_hash: str
+    role: str
+    created_at: datetime
+
+    class Config: 
+        orm_mode = True
