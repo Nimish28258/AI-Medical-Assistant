@@ -6,6 +6,5 @@ from .report import Report
 from .appointment import Appointment
 from .prescription import Prescription
 from .medical_history import MedicalHistory
-from .feedback import Feedback
 from .notification import Notification
-from .audit_log import AuditLog
+
